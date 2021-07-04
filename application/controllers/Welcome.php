@@ -31,4 +31,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('formulario'); //contenido
 		$this->load->view('inc_jooter.php');//archivos del jooter
 	}
+
+	public function pruebabd()
+	{
+		$query=$this->db->get('clientes');
+		$execonsulta=$query->result();
+		print_r($execonsulta);
+	}
 }
