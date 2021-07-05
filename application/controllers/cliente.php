@@ -14,5 +14,31 @@ class Cliente extends CI_Controller {
 		$this->load->view('inc_jooter.php');//archivos del jooter
 	}
 
+	public function modificar()
+	{
+		$Idcliente=$_POST['Idcliente'];
+		$data['infocliente']=$this->cliente_model->recuperarcliente($Idcliente);
+
+		
+		$this->load->view('inc_head.php'); //archivos de cabesera
+		$this->load->view('cli_modificar',$data); //contenido
+		$this->load->view('inc_jooter.php');//archivos del jooter
+
+	}
+
+	public function modificarbd()
+	{
+		$Idcliente=$_POST['Idcliente'];
+		$data['primer_apellido']=$_POST['primer_apellido'];
+		$data['segundo_apellido']=$_POST['segundo_apellido'];
+		$data['nombres']=$_POST['nombres'];
+		$data['ci']=$_POST['ci'];
+		$data['equipo_electronico']=$_POST['equipo_electronico'];
+		$data['Nro_de_factura']=$_POST['Nro_de_factura'];
+
+		$this->cliente_model->modificarcliente($Idcliente,$data);
+		redirect('cliente/index', 'refresh');
+	}
+
 	
 }

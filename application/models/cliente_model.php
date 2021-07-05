@@ -10,10 +10,26 @@ class Cliente_model extends CI_Model {
         $this->db->from('clientes');
         return $this->db->get();
 
-		//$this->load->view('inc_head.php'); //archivos de cabesera
-		//$this->load->view('welcome_message'); //contenido
-		//$this->load->view('inc_jooter.php');//archivos del jooter
 	}
+
+	public function recuperarcliente($Idcliente)
+	{
+        $this->db->select('*');
+        $this->db->from('clientes');
+		$this->db->where('Idcliente',$Idcliente);
+        return $this->db->get();
+	}
+
+	public function modificarcliente($Idcliente,$data)
+	{
+       
+		$this->db->where('Idcliente',$Idcliente);
+		$this->db->update('clientes',$data);
+		
+        
+	}
+
+
 
     /*
 

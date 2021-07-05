@@ -13,6 +13,7 @@
       <th scope="col">ci</th>
       <th scope="col">equipo_electronico</th>
       <th scope="col">Nro_de_factura</th>
+      <th scope="col">modificar</th>
     
     </tr>
   </thead>
@@ -33,9 +34,18 @@
       <td><?php echo $row->ci;?></td>
       <td><?php echo $row->equipo_electronico;?></td>
       <td><?php echo $row->Nro_de_factura;?></td>
+      <td>
+           <?php
+              echo form_open_multipart('cliente/modificar');
+           ?>
+           <input type="hidden" name="Idcliente" value="<?php echo $row->Idcliente; ?>">
+           <button type="submit" class="btn btn-primary btn-xs">modificar</botton>
+           <?php
+              echo form_close();
+           ?>
+      </td> 
     </tr>
- 
-       <?php
+   <?php
 
        $indice++;
 
@@ -43,10 +53,6 @@
    
    ?>
 
-
-
-
-    
   </tbody>
 </table>
     
