@@ -37,5 +37,15 @@ class Cliente_model extends CI_Model {
         
 	}
 
+	public function eliminarcliente($Idcliente)
+	{
+       
+		$this->db->where('Idcliente',$Idcliente);
+		$this->db->delete('clientes');
+		
+        
+	}
+
+
 
 }

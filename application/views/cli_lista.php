@@ -23,6 +23,7 @@
       <th scope="col">equipo_electronico</th>
       <th scope="col">Nro_de_factura</th>
       <th scope="col">modificar</th>
+      <th scope="col">eliminar</th>
     
     </tr>
   </thead>
@@ -53,6 +54,18 @@
               echo form_close();
            ?>
       </td> 
+         <td>
+
+           <?php
+              echo form_open_multipart('cliente/eliminarbd');
+           ?>
+           <input type="hidden" name="Idcliente" value="<?php echo $row->Idcliente; ?>">
+           <button type="submit" class="btn btn-danger btn-xs">eliminar</button>
+           <?php
+              echo form_close();
+           ?>   
+
+       </td> 
     </tr>
        <?php
 

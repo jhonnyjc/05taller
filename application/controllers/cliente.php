@@ -64,5 +64,13 @@ class Cliente extends CI_Controller {
 		redirect('cliente/index', 'refresh');
 	}
 
+	public function eliminarbd()
+	{
+		$Idcliente=$_POST['Idcliente'];
+		$this->cliente_model->eliminarcliente($Idcliente);
+
+		redirect('cliente/index', 'refresh');
+	}
+
 	
 }
