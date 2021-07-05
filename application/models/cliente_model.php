@@ -29,22 +29,13 @@ class Cliente_model extends CI_Model {
         
 	}
 
-
-
-    /*
-
-	public function vista2()
+	public function agregarcliente($data)
 	{
-		$this->load->view('inc_head.php'); //archivos de cabesera
-		$this->load->view('formulario'); //contenido
-		$this->load->view('inc_jooter.php');//archivos del jooter
+       
+		$this->db->insert('clientes',$data);
+		
+        
 	}
 
-	public function pruebabd()
-	{
-		$query=$this->db->get('clientes');
-		$execonsulta=$query->result();
-		print_r($execonsulta);
-	}
-    */
+
 }

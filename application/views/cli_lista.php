@@ -3,7 +3,16 @@
   <div class="row">
     <div class="col-md-12">
 
-    <table class="table">
+   <?php
+     echo form_open_multipart('cliente/registar');
+    ?>
+       <button type="submit" class="btn btn-success btn-xs">registar cliente</button>
+   <?php
+      echo form_close();
+   ?>
+
+
+  <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -39,19 +48,19 @@
               echo form_open_multipart('cliente/modificar');
            ?>
            <input type="hidden" name="Idcliente" value="<?php echo $row->Idcliente; ?>">
-           <button type="submit" class="btn btn-primary btn-xs">modificar</botton>
+           <button type="submit" class="btn btn-primary btn-xs">modificar</button>
            <?php
               echo form_close();
            ?>
       </td> 
     </tr>
-   <?php
+       <?php
 
        $indice++;
 
    }
    
-   ?>
+      ?>
 
   </tbody>
 </table>
