@@ -14,6 +14,17 @@ class Cliente extends CI_Controller {
 		$this->load->view('inc_jooter.php');//archivos del jooter
 	}
 
+	public function tes()
+	{
+        $lista=$this->cliente_model->lista();
+        $data['clientes']=$lista;
+
+		$this->load->view('inc_head.php'); //archivos de cabesera
+		$this->load->view('inc_menu'); //contenido
+		$this->load->view('tes',$data); //contenido
+		$this->load->view('inc_jooter.php');//archivos del jooter
+	}
+
 	public function modificar()
 	{
 		$Idcliente=$_POST['Idcliente'];
