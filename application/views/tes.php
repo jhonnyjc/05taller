@@ -29,6 +29,15 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">DataTable with default features</h3>
+                <br>
+                <?php
+                
+                echo date('Y/m/d H:i:s');
+
+
+                ?>
+
+
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -41,7 +50,8 @@
                     <th>nombres</th>
                     <th>ci</th>
                     <th>equipo_electronico</th>
-                    <th>Nro_de_factura</th>
+                    <th>estado_de_factura</th>
+                    <th>fecha</th>
                    
                   </tr>
                   </thead>
@@ -61,7 +71,8 @@
                     <td><?php echo $row->nombres;?></td>
                     <td><?php echo $row->ci;?></td>
                     <td><?php echo $row->equipo_electronico;?></td>
-                    <td><?php echo $row->Nro_de_factura;?></td>
+                    <td><?php echo estado($row->Nro_de_factura);?></td>
+                    <td><?php echo formatearfecha($row->creado);?></td>
                     
                   </tr>
 
@@ -83,7 +94,8 @@ $indice++;
                     <th>nombres</th>
                     <th>ci</th>
                     <th>equipo_electronico</th>
-                    <th>Nro_de_factura</th>
+                    <th>estado_de_factura</th>
+                    <th>fecha</th>
                   </tr>
                   </tfoot>
                 </table>
