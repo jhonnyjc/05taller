@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>DataTables</h1>
+            <h1>CLIENTES</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -28,14 +28,20 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+                <h3 class="card-title">registro de clientes</h3>
                 <br>
                 <?php
                 
                 echo date('Y/m/d H:i:s');
-
-
                 ?>
+ <?php
+   echo form_open_multipart('usuarios/logout');      
+ ?>
+ <button type="submit" class="btn btn-danger btn-block">salir</button>
+
+ <?php
+  echo form_close();
+ ?>
 
 
               </div>
