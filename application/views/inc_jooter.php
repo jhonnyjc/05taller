@@ -1,17 +1,17 @@
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
+  <!--<footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.1.0
     </div>
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
+  </footer>-->
 
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
+  <!--<aside class="control-sidebar control-sidebar-dark">-->
     <!-- Control sidebar content goes here -->
-  </aside>
+  <!--</aside>-->
   <!-- /.control-sidebar -->
-</div>
+<!--</div>-->
 <!-- ./wrapper -->
 
 <!-- jQuery -->
@@ -35,6 +35,7 @@
 <script src="<?php echo base_url();?>admilte/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url();?>admilte/dist/js/demo.js"></script>
+
 <!-- Page specific script -->
 <script>
   $(function () {

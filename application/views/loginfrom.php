@@ -1,3 +1,4 @@
+
 <?php
 switch($msg){
     case '1':
@@ -19,15 +20,13 @@ switch($msg){
 
 }
 
-
-
-
 ?>
-
+ 
 <div class="login-box">
-  <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+  <div class="login-logo center">
+    <a href="../../index2.html"><b>TALLER</b>ELECTRONICO</a>
   </div>
+  <!--<img src="imgtaller/logoPS2.jpg" height="100" width="400" alt="">-->
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
@@ -61,40 +60,40 @@ switch($msg){
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
               <label for="remember">
-                Remember Me
+                recordar
               </label>
             </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">ingresar</button>
+            <button type="submit" class="btn btn-success btn-block">ingresar</button>
           </div>
           <!-- /.col -->
         </div>
       
-<?php
-echo form_close();
+  <?php
+  echo form_close();
 
-?>
+  ?>
 
 
 
       <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
+        <p>- bienvenido -</p>
         <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+          <i class="fab fa-facebook mr-2"></i> iniciar con Facebook
         </a>
         <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+          <i class="fab fa-google-plus mr-2"></i> iniciar con  Google+
         </a>
       </div>
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
+        <a href="forgot-password.html">olvide mi contraseña</a>
       </p>
       <p class="mb-0">
-        <a href="register.html" class="text-center">Register a new membership</a>
+        <a href="register.html" class="text-center">Registrar nuevo usuario</a>
       </p>
     </div>
     <!-- /.login-card-body -->
