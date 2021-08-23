@@ -81,7 +81,7 @@
        
    ?>
                
-                  <tr>
+                <tr>
                     <td><?php echo $indice;?></td>
                     <td><?php echo $row->primer_apellido;?></td>
                     <td><?php echo $row->segundo_apellido;?></td>
@@ -91,29 +91,27 @@
                     <td><?php echo estado($row->Nro_de_factura);?></td>
                     <td><?php echo formatearfecha($row->creado);?></td>
                     <td>
-                                             <div class="row">
-                                                    <div class="col-md-6 col-6">
-                                                        <!--<button class="btn btn-block btn-sm btn-warning" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-edit"></i></button>-->
-                                                        <span data-toggle="tooltip" data-placement="top" title="Editar">
-                                                            <button type="button" class="btn btn-block btn-sm btn-warning" data-toggle="modal" data-target="#editarAutoridad<?php echo $row->Idcliente; ?>">
-                                                                <i class="fas fa-edit"></i>
-                                                            </button>
-                                                        </span>
-                                                    </div>
-                                                    <div class="col-md-6 col-6">
-                                                       
-                                                            <!--<button class="btn btn-block btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash-alt"></i></button>-->
-                                                            <span data-toggle="tooltip" data-placement="top" title="Eliminar">
-                                                                <button type="button" class="btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#eliminarAutoridad<?php echo $row->Idcliente; ?>">
-                                                                    <i class="fas fa-trash-alt"></i>
-                                                                </button>
-                                                            </span>
-                                                            
-                                                    </div>
-                                                </div>
-                                            </td>
+                      <?php
+                     echo form_open_multipart('cliente/modificar');
+                     ?>
+                    <input type="hidden" name="Idcliente" value="<?php echo $row->Idcliente; ?>">
+                    <button type="submit" class="btn btn-primary btn-xs">modificar</button>
+                    <?php
+                    echo form_close();
+                   ?>
+                 </td> 
+               <td>
+
+                <?php
+                echo form_open_multipart('cliente/eliminarbd');
+                 ?>
+                <input type="hidden" name="Idcliente" value="<?php echo $row->Idcliente; ?>">
+                 <button type="submit" class="btn btn-danger btn-xs">eliminar</button>
+                <?php
+                echo form_close();
+                ?>   
       
-                  </tr>
+              </tr>
 
  <?php
 
