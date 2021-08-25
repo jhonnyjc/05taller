@@ -66,7 +66,50 @@ class Usuarios extends CI_Controller {
 
         
     }
-    public function registar()
+
+
+
+    public function tesusuario()
+	{
+        $lista=$this->usuario_model->lista();
+        $data['usuarios']=$lista;
+
+		$this->load->view('inc_head.php'); //archivos de cabesera
+		$this->load->view('inc_menu'); //contenido
+		$this->load->view('usuArioview/usuario_view.php',$data); //contenido
+		$this->load->view('inc_jooter.php');//archivos del jooter
+	}
+    public function modificar()
+	{
+		$IdUsuarios=$_POST['IdUsuarios'];
+		$data['infousuario']=$this->usuario_model->recuperarusuario($IdUsuarios);
+
+		
+		$this->load->view('inc_head.php'); //archivos de cabesera
+		$this->load->view('usuArioview/usu_modificar.php',$data); //contenido
+		$this->load->view('inc_jooter.php');//archivos del jooter
+
+	}
+
+	public function modificarbd()
+	{
+		$IdUsuarios=$_POST['IdUsuarios'];
+		$data['login']=$_POST['login'];
+		$data['password']=$_POST['password'];
+        $data['tipo']=$_POST['tipo'];
+        $data['nombre']=$_POST['nombre'];
+		$data['apellidoPaterno']=$_POST['apellidoPaterno'];
+		$data['apellidoMaterno']=$_POST['apellidoMaterno'];
+		$data['ci']=$_POST['ci'];
+        $data['celular']=$_POST['celular'];
+        $data['direccion']=$_POST['direccion'];
+        $data['fecha']=$_POST['fecha'];
+  
+		$this->usuario_model->modificarusuario($IdUsuarios,$data);
+		redirect('usuarios/tesusuario','refresh');
+	}
+
+	public function registar()
 	{
 		
 		$this->load->view('inc_head.php'); //archivos de cabesera
@@ -76,33 +119,8 @@ class Usuarios extends CI_Controller {
 
 	}
 
-    public function agregarusuariobd()
+	public function agregarbd()
 	{
-		$data['login']=$_POST['login'];
-		$data['password']=$_POST['password'];
-		$data['tipo']=$_POST['tipo'];
-	
-		
-		$this->cliente_model->agregarcliente($data);
-
-		redirect('cliente/index', 'refresh');
-	}
-
-    public function modificarusuario()
-	{
-		$Idcliente=$_POST['Idcliente'];
-		$data['infocliente']=$this->cliente_model->recuperarcliente($Idcliente);
-
-		
-		$this->load->view('inc_head.php'); //archivos de cabesera
-		$this->load->view('cli_modificar',$data); //contenido
-		$this->load->view('inc_jooter.php');//archivos del jooter
-
-	}
-
-	public function modificarusuariobd()
-	{
-		$Idcliente=$_POST['Idcliente'];
 		$data['primer_apellido']=$_POST['primer_apellido'];
 		$data['segundo_apellido']=$_POST['segundo_apellido'];
 		$data['nombres']=$_POST['nombres'];
@@ -110,8 +128,17 @@ class Usuarios extends CI_Controller {
 		$data['equipo_electronico']=$_POST['equipo_electronico'];
 		$data['Nro_de_factura']=$_POST['Nro_de_factura'];
 
-		$this->cliente_model->modificarcliente($Idcliente,$data);
-		redirect('cliente/index', 'refresh');
+		$this->cliente_model->agregarcliente($data);
+
+		redirect('cliente/tes', 'refresh');
+	}
+
+	public function eliminarbd()
+	{
+		$Idcliente=$_POST['Idcliente'];
+		$this->cliente_model->eliminarcliente($Idcliente);
+
+		redirect('cliente/tes', 'refresh');
 	}
 
 	

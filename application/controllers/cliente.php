@@ -48,7 +48,7 @@ class Cliente extends CI_Controller {
 		$data['Nro_de_factura']=$_POST['Nro_de_factura'];
 
 		$this->cliente_model->modificarcliente($Idcliente,$data);
-		redirect('cliente/index', 'refresh');
+		redirect('cliente/tes', 'refresh');
 	}
 
 	public function registar()
@@ -72,7 +72,7 @@ class Cliente extends CI_Controller {
 
 		$this->cliente_model->agregarcliente($data);
 
-		redirect('cliente/index', 'refresh');
+		redirect('cliente/tes', 'refresh');
 	}
 
 	public function eliminarbd()
@@ -80,7 +80,7 @@ class Cliente extends CI_Controller {
 		$Idcliente=$_POST['Idcliente'];
 		$this->cliente_model->eliminarcliente($Idcliente);
 
-		redirect('cliente/index', 'refresh');
+		redirect('cliente/tes', 'refresh');
 	}
 
 	

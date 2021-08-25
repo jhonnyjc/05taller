@@ -135,15 +135,11 @@
     </ul>
   </nav>
   <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <!--<img src="logoPS2.jpg" height="100" width="200" alt="">-->
-    <a >
-        <!--<img src="../../admilte/dist/img/logo.jpg" alt="" width="200">-->
-             <!--<img src="adminlte/dist/img/logo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">-->
-      <span class="brand-text font-weight-light">taller </span>
+    <a href="../../index3.html" class="brand-link">
+      <img src="<?php echo base_url();?>imgtaller/logoPS2.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">TALLER <br> electronica</span>
     </a>
 
     <!-- Sidebar -->
@@ -151,14 +147,12 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <!--<img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">-->
+          <img src="<?php echo base_url();?>imgtaller/logoPS2.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
-         <!--<div class="info">
-          <a href="#" class="d-block">taller</a>
-        </div>-->
+        <div class="info">
+          <a href="#" class="d-block">admi</a>
+        </div>
       </div>
-
-      <br> <br>
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -177,7 +171,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
+         <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -205,16 +199,97 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li>-->
+
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="<?php echo base_url();?>index.php/usuarios/tesusuario" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
+                USUARIOS
+                <?php
+               echo form_open_multipart('usuarios/logout');      
+               ?>
+
+                <span class="right badge badge-danger"></span>
+                <?php
+                echo form_close();
+                ?>
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="<?php echo base_url();?>index.php/cliente/tes" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                CLIENTES
+                <?php
+               echo form_open_multipart('usuarios/logout');      
+               ?>
+
+                <span class="right badge badge-danger"></span>
+                <?php
+                echo form_close();
+                ?>
+              </p>
+            </a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="<?php echo base_url();?>index.php/equipoelectronico/tesequipoelectronico" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                EQUIPOS ELECTRONICOS
+                <?php
+               echo form_open_multipart('usuarios/logout');      
+               ?>
+
+                <span class="right badge badge-danger"></span>
+                <?php
+                echo form_close();
+                ?>
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="<?php echo base_url();?>index.php/repuesto/tesrepuesto" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                REPUESTO
+                <?php
+               echo form_open_multipart('usuarios/logout');      
+               ?>
+
+                <span class="right badge badge-danger"></span>
+                <?php
+                echo form_close();
+                ?>
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="<?php echo base_url();?>index.php/usuarios/tesusuario" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                SERVICIO
+                <?php
+               echo form_open_multipart('usuarios/logout');      
+               ?>
+
+                <span class="right badge badge-danger"></span>
+                <?php
+                echo form_close();
+                ?>
+              </p>
+            </a>
+          </li>
+
+          
+
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>

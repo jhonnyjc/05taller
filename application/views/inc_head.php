@@ -21,4 +21,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" href="<?php echo base_url();?>admilte/dist/css/adminlte.min.css">
 
 <body class="hold-transition sidebar-mini">
+  
 </head>

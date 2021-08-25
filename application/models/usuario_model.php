@@ -17,4 +17,51 @@ class Usuario_model extends CI_Model {
 
 	}
 
+      
+
+	
+	public function lista()
+	{
+        $this->db->select('*');
+        $this->db->from('usuarios');
+        return $this->db->get();
+
+	}
+
+	public function recuperarusuario($IdUsuarios)
+	{
+        $this->db->select('*');
+        $this->db->from('usuarios');
+		$this->db->where('IdUsuarios',$IdUsuarios);
+        return $this->db->get();
+	}
+
+	public function modificarusuario($IdUsuarios,$data)
+	{
+       
+		$this->db->where('IdUsuarios',$IdUsuarios);
+		$this->db->update('usurios',$data);
+		
+        
+	}
+
+	public function agregarcliente($data)
+	{
+       
+		$this->db->insert('clientes',$data);
+		
+        
+	}
+
+	public function eliminarcliente($Idcliente)
+	{
+       
+		$this->db->where('Idcliente',$Idcliente);
+		$this->db->delete('clientes');
+		
+        
+	}
+
+
+	
 }

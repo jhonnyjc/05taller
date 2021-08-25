@@ -21,6 +21,9 @@ switch($msg){
 }
 
 ?>
+
+<!--<div class="modal-dialog" role="document">-->
+
  
 <div class="login-box">
   <div class="login-logo center">
@@ -97,5 +100,6 @@ switch($msg){
       </p>
     </div>
     <!-- /.login-card-body -->
-  </div>
-</div>
+    </div>
+   </div>
+
