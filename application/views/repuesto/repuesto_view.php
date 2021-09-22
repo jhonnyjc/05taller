@@ -26,6 +26,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">registro de repuesto</h3>
+                 <h3 class="card-title">registro usados</h3>
                 <br>
                 <?php
                 
